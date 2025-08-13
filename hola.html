@@ -1,0 +1,240 @@
+}<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Portafolio</title>
+<link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1, h2 {
+    margin-bottom: 10px;
+}
+.sidebar {
+    width: 200px;
+    background-color: #1e1e1e;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #f5f5f5;
+}
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+.nav-links a {
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.3s;
+}
+.nav-links a:hover, .nav-links a.active {
+    background-color: #333;
+}
+.social-links {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+.social-links a {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+.social-links a:hover {
+    transform: scale(1.2);
+}
+main {
+    margin-left: 200px;
+    padding: 40px;
+    flex: 1;
+}
+section {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.tech-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.tech-card i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.tech-card span {
+    font-size: 14px;
+    color: #f5f5f5;
+}
+.tech-card:hover {
+    transform: scale(1.05);
+    background-color: #2a2a2a;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+button {
+    padding: 10px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #e65c00;
+}
+</style>
+</head>
+<body>
+<aside class="sidebar">
+    <img src="https://i.redd.it/s198u8sk8cp91.jpg" alt="Mi Foto">
+    <nav class="nav-links">
+        <a href="#sobre-mi" class="active">Sobre mí</a>
+        <a href="#educacion">Educación</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="social-links">
+        <a href="https://instagram.com" target="_blank">📷</a>
+        <a href="https://facebook.com" target="_blank">📘</a>
+        <a href="https://linkedin.com" target="_blank">💼</a>
+    </div>
+</aside>
+<main>
+    <section id="sobre-mi">
+        <h1>Sobre mí</h1>
+        <p>Soy desarrollador Full Stack formado en Platzi, estudiante de Ingeniería Electrónica en UTEC, 
+        Analista de Datos en Netzun y desarrollador web con 1 año de experiencia profesional.</p>
+    </section>
+
+    <section id="educacion">
+        <h2>Educación</h2>
+        <ul>
+            <li>Desarrollador Full Stack - Platzi</li>
+            <li>Ingeniería Electrónica - UTEC</li>
+            <li>Analista de Datos en Netzun</li>
+        </ul>
+    </section>
+
+    <section id="experiencia">
+        <h2>Experiencia</h2>
+        <ul>
+            <li>Desarrollador Web </li>
+        </ul>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <p>Aquí irán algunos de mis proyectos destacados con enlaces e imágenes.</p>
+    </section>
+
+    <section id="tecnologias">
+        <h2>Tecnologías</h2>
+        <div class="tech-grid">
+            <div class="tech-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+            <div class="tech-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+            <div class="tech-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+            <div class="tech-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+            <div class="tech-card"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></div>
+            <div class="tech-card"><i class="devicon-vuejs-plain colored"></i><span>Vue.js</span></div>
+            <div class="tech-card"><i class="devicon-react-original colored"></i><span>React</span></div>
+            <div class="tech-card"><i class="devicon-oracle-original colored"></i><span>Oracle</span></div>
+            <div class="tech-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+            <div class="tech-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+
+<script>
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.2 });
+
+sections.forEach(sec => observer.observe(sec));
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+        const sectionTop = sec.offsetTop - 50;
+        if (pageYOffset >= sectionTop) {
+            current = sec.getAttribute('id');
+        }
+    });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
